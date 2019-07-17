@@ -51,8 +51,7 @@ all: build
 	@echo '   (WARNING: will take a lot of time/disk)'
 	@echo ''
 
-INDEX_PATH = .git/index
-out/git_submodule.stamp: ${INDEX_PATH}
+out/git_submodule.stamp: .git/index
 	git submodule update --init
 	touch $@
 
